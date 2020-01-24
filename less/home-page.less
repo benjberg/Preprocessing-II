@@ -1,5 +1,8 @@
 .home {
-
+@media @mobile {
+  width: 100%;
+ overflow: hidden;
+}
   .content-section {
     margin: 30px 0;
     display: flex;
@@ -11,11 +14,21 @@
     .text-content {
       width: 48%;
       padding-right: 1%;
+      @media @mobile{
+        margin: 0 4rem;
+        width: 100%;
+        text-align: left;
+        
+      }
     }
 
     .img-content {
       width: 48%;
       padding-left: 1%;
+      @media @mobile {
+        width: 100%;
+        text-align: center;
+      }
 
       img {
         border-radius: 10px;
@@ -26,22 +39,35 @@
   .inverse-content {
     padding-bottom: 30px;
     border-bottom: 2px dashed @navigation-border;
+    @media @mobile {
+      flex-direction: column-reverse;
+      width:100%;
+      padding-right: 7rem;
+      
+    }
 
     .text-content {
       padding-left: 1%;
       padding-right: 0;
+      @media @mobile {
+        text-align: left; 
+      }
     }
 
     .img-content {
       padding-right: 1%;
       padding-left: 0;
+      @media @mobile{
+        margin-left: 3rem;
+      }
     }
+
   }
 
   .content-destination {
     width: 75%;
     margin: 0 auto 30px;
-
+    
     img {
       border-radius: 10px;
     }
@@ -52,10 +78,28 @@
     border-top: 2px dashed @navigation-border;
     display: flex;
     justify-content: space-between;
-
+    @media @mobile {
+      flex-direction: column;
+        width: 100%;
+      }
+    }
     .destination {
       width: 30%;
       margin-bottom: 30px;
+     @media @mobile {
+       width: 100%;
+       margin-left: 5rem;
+       padding-right: 6rem;
+     }
+       
+       button{
+        .button();
+        @media @mobile {
+          width: 95%;
+          
+        }
+        }
+      }
     }
-  }
-}// home
+  
+
